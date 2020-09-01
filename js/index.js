@@ -36,7 +36,52 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+const navigation = document.querySelector('nav a').style.color = 'green'
+// navigation.appendChild(childElement)
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let count = 1
+const navigationLinks = document.querySelectorAll(["nav a"])
+navigationLinks.forEach(item => item.textContent=siteContent.nav[`nav-item-${count++}`])
+
+
+const title = document.querySelector(".cta h1")
+title.textContent = siteContent.cta.h1
+
+const but = document.querySelector(".cta button")
+but.textContent = siteContent.cta.button
+
+const head = document.querySelector("#cta-img")
+head.setAttribute('src', siteContent["cta"]["img-src"])
+
+const main = document.querySelectorAll(".text-content h4")
+main[0].textContent = siteContent["main-content"]["features-h4"]
+main[1].textContent = siteContent["main-content"]["about-h4"]
+main[2].textContent = siteContent["main-content"]["services-h4"]
+main[3].textContent = siteContent["main-content"]["products-h4"]
+main[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+const main1 = document.querySelectorAll(".text-content p")
+main1[0].textContent = siteContent["main-content"]["features-content"]
+main1[1].textContent = siteContent["main-content"]["about-content"]
+main1[2].textContent = siteContent["main-content"]["services-content"]
+main1[3].textContent = siteContent["main-content"]["products-content"]
+main1[4].textContent = siteContent["main-content"]["vision-content"]
+
+const mid = document.querySelector("#middle-img")
+mid.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const cont = document.querySelector(".contact h4")
+cont.textContent = siteContent["contact"]["contact-h4"]
+
+const contp = document.querySelectorAll(".contact p")
+contp[1].textContent = siteContent["contact"]["address"]
+contp[2].textContent = siteContent["contact"]["phone"]
+contp[3].textContent = siteContent["contact"]["email"]
+
+const foot = document.querySelector("footer p")
+foot.textContent = siteContent["footer"]["copyright"]
