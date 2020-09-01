@@ -36,7 +36,10 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-const navigation = document.querySelector('nav a').style.color = 'green'
+const navigation = document.querySelectorAll('.container a')
+navigation.forEach(item => item.style.color = "green")
+
+
 // navigation.appendChild(childElement)
 
 // Example: Update the img src for the logo
@@ -64,7 +67,6 @@ main[2].textContent = siteContent["main-content"]["services-h4"]
 main[3].textContent = siteContent["main-content"]["products-h4"]
 main[4].textContent = siteContent["main-content"]["vision-h4"]
 
-
 const main1 = document.querySelectorAll(".text-content p")
 main1[0].textContent = siteContent["main-content"]["features-content"]
 main1[1].textContent = siteContent["main-content"]["about-content"]
@@ -79,9 +81,10 @@ const cont = document.querySelector(".contact h4")
 cont.textContent = siteContent["contact"]["contact-h4"]
 
 const contp = document.querySelectorAll(".contact p")
-contp[1].textContent = siteContent["contact"]["address"]
-contp[2].textContent = siteContent["contact"]["phone"]
-contp[3].textContent = siteContent["contact"]["email"]
+contp[0].textContent = siteContent["contact"]["address"]
+contp[1].textContent = siteContent["contact"]["phone"]
+console.log(contp)
+contp[2].textContent = siteContent["contact"]["email"]
 
 const foot = document.querySelector("footer p")
 foot.textContent = siteContent["footer"]["copyright"]
